@@ -6,7 +6,7 @@ print("=========================================================================
 print("DN                                                 Description           Speed    MTU  ")
 print("-------------------------------------------------- --------------------  ------  ------")
 
-with open('json/sample-data.json') as f:
+with open('C:\All Labka\labs\lab 4\j.son\sample-data.json') as f:
     data = json.load(f)
 
 request_from_server = data["imdata"][0]["l1PhysIf"]["attributes"]["dn"]

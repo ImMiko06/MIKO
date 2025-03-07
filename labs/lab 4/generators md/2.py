@@ -1,10 +1,6 @@
-def evens(n):
-    result=[]
-    for i in range(n):
-        if i%2==0:
-            result.append(i)
-    return result
+def even_numbers (n) :
+  for i in range(0, n + 1, 2): 
+      yield i
 
-n=int(input("n:"))
-k=evens(n)
-print(k)
+n = int(input("Enter a number: "))
+print(",". join (str(num) for num in even_numbers(n)))
