@@ -7,7 +7,7 @@ screen = pygame.display.set_mode(window_size)
 pygame.display.set_caption("Draw circle")
 
 # Цвета
-ball_color = pygame.Color('red')
+ball_color = pygame.Color('blue')
 bg_color = pygame.Color('white')
 
 # Параметры шара
@@ -25,13 +25,13 @@ while running:
             running = False
 
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_w]:
         ball_pos[1] = max(ball_pos[1] - speed, 0)  # Верхняя граница
-    if keys[pygame.K_DOWN]:
+    if keys[pygame.K_s]:
         ball_pos[1] = min(ball_pos[1] + speed, window_size[1] - ball_radius * 2)  # Нижняя граница
-    if keys[pygame.K_LEFT]:
+    if keys[pygame.K_a]:
         ball_pos[0] = max(ball_pos[0] - speed, 0)  # Левая граница
-    if keys[pygame.K_RIGHT]:
+    if keys[pygame.K_d]:
         ball_pos[0] = min(ball_pos[0] + speed, window_size[0] - ball_radius * 2)  # Правая граница
 
     # Отрисовка

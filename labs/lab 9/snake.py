@@ -221,10 +221,11 @@ def game_loop():
             SPEED += 1
             snake.grow()
 
+        # Проверка на столкновение с телом змеи
         if snake.death() or snake.history[0][0] < 0 or snake.history[0][0] >= WIDTH or \
            snake.history[0][1] < 0 or snake.history[0][1] >= HEIGHT:
             game_over_screen()
-            return  # выйти из цикла и перезапустить
+            return  # выйти из цикла и перезапустить игру
 
         pygame.display.update()
         clock.tick(SPEED)
